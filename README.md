@@ -7,7 +7,7 @@ using LPC2148 ARM7 microcontroller.
 - 16x2 LCD
 - 4x4 Keypad
 - R305 Fingerprint Sensor
-- AT25C256 EEPROM
+- AT24C256 EEPROM
 - L293D Motor Driver
 - DC Motor
 
