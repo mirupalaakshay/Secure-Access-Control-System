@@ -189,5 +189,5 @@ The hardware implementation consists of the LPC2148 development board, R305 fing
 
 ## 🎥 Project Demo
 
-[▶️ Watch Project Demo](./secure_access_control_demo.mp4)
+[▶️ Watch the Project Demo](./project_demo.mp4)
 
