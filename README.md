@@ -106,7 +106,7 @@ Granted         Denied
 Motor / Lock
 Activated
 ```
-**##⚡ **Interrupt**
+##⚡ **Interrupt**
 
 The system uses an external interrupt switch connected to the LPC2148.
 
@@ -186,4 +186,7 @@ The hardware implementation consists of the LPC2148 development board, R305 fing
 **Memory:** I2C EEPROM
 **Motor Driver:** L293D
 **Communication:** UART & I2C
+## 🎥 Project Demo
+
+[▶️ Watch the Secure Access Control System Demo](./secure_access_control_project_demo_github.mp4)
 
