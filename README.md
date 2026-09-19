@@ -1,6 +1,5 @@
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/84948d9c-bbe8-4eb3-b8cc-da1cd1ead80d" /># Secure Access Control System
-Secure access control system with multi-level authentication
-using LPC2148 ARM7 microcontroller.
+# Secure Access Control System 
+Secure access control system with multi-level authentication using LPC2148 ARM7 microcontroller.
 
 ## 📌 Project Overview
 
@@ -107,7 +106,7 @@ Granted         Denied
 Motor / Lock
 Activated
 ```
-##⚡ **Interrupt / Setup Operation**
+**##⚡ **Interrupt**
 
 The system uses an external interrupt switch connected to the LPC2148.
 
@@ -187,67 +186,4 @@ The hardware implementation consists of the LPC2148 development board, R305 fing
 **Memory:** I2C EEPROM
 **Motor Driver:** L293D
 **Communication:** UART & I2C
-# SECURE ACCESS CONTROL SYSTEM WITH MULTI-LEVEL AUTHENTICATION
-### ARM7 LPC2148 | R305 Fingerprint | AT24C256 EEPROM | 4x4 Keypad | DC Motor Door Lock
-
-> A 3-level secure access system where user must pass ID + Password + Fingerprint to open door. Built on VECTOR ARM7 Development Board.
-
----
-
-## 📸 Project Demo
-
-### 1. Block Diagram
-![Block Diagram](images/block_diagram.png)
-*LPC2148 as core controller, R305 via UART0, EEPROM via I2C, LCD & L293D via GPIO*
-
-### 2. Hardware Photos
-| Main Screen | Menu Screen |
-| :---: | :---: |
-| ![Main](images/hardware_main.jpg) | ![Menu](images/hardware_menu.jpg) |
-| `SECURE ACCESS CONTROL SYSTEM` on LCD | `1.ENROLL 2.EDIT 3.DELETE 4.EXIT` |
-
-### 3. Working Video Demo
-> Door opens (DC Fan rotates) after successful 3-level authentication
-
-https://github.com/YOUR_USERNAME/Secure-Access-Control-System/assets/demo.mp4
-*Video shows: LCD displays menu -> Finger placed -> Access Granted -> Fan ON (Door Open)*
-
-![Working Demo](images/demo.gif)
-*If video link doesn't play, upload demo.mp4 in GitHub -> it will auto-convert to this.*
-
----
-
-## 🛠️ Components Used
-
-**Hardware:**
-- LPC2148 ARM7 Microcontroller
-- R305 Fingerprint Module (UART0)
-- 4x4 Matrix Keypad
-- 16x2 LCD Display
-- AT24C256 EEPROM (I2C External Storage)
-- L293D Motor Driver + DC Motor/Fan (Door Lock)
-- VECTOR Advanced Development Board for ARM7
-
-**Software:**
-- Keil uVision4
-- Embedded C
-- Flash Magic
-
-## ⚙️ Working Principle
-
-**Enrollment:**
-`ID (1 Byte) + Password (4 Bytes + '\0') -> Stored at EEPROM address (ID-1)*6`
-
-**Authentication:**
-1. Enter ID -> System reads from `EEPROM_BASE + 1`
-2. Enter Password -> Compares with stored password using `strcmp()`
-3. Place Finger -> R305 verifies via UART0
-4. If all match -> `ACCESS GRANTED` -> L293D drives DC Motor (Door Opens)
-
-## 🐛 Bug Fixed During Development
-**Issue:** Password always incorrect after enroll.
-**Root Cause:** Address miscalculation `found+1` instead of `(found-1)*6 + 1`, missing NULL termination.
-**Fix:** Now reads 5 bytes (4 char + '\0') and properly terminates string before strcmp.
-
-## 📂 Folder Structure
 
