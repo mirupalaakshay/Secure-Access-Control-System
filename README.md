@@ -12,27 +12,9 @@ The user enters the User ID and password through the keypad. After successful ve
 ---
 
 ## ⚙️ How It Works
-
 ```text
-                 POWER ON
-                    ↓
-            System Initialization
-                    ↓
-              Enter User ID
-                    ↓
-             Enter Password
-                    ↓
-          Fingerprint Verification
-                    ↓
-             Authentication
-                    ↓
-          ┌─────────┴─────────┐
-          ↓                   ↓
-       SUCCESS              FAILURE
-          ↓                   ↓
-   Access Granted       Access Denied
-          ↓                   ↓
-    Motor / Lock ON       LCD Message
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/08a0c21c-5bcd-4248-b931-18bad228418e" />
+
 ```
 ## Block Diagram
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a1445954-df73-40f4-b071-7d0abca6d77d" />
